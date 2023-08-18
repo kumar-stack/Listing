@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ysabeau Office", sans-serif;
+}
+header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff26;
+}
+header .container-fluid {
+  padding-inline: 100px;
+}
+.active {
+  color: #1db2ff !important;
+}
+.lstproprty {
+  background: #1db2ff;
+  border-radius: 40px;
+  padding: 0px 10px;
+}
+.lstproprty > .nav-link {
+  color: white;
+}
+.lstproprty > .nav-link:hover {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #1db2ff !important;
+}
+.banner .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  color: white;
+}
+.banner {
+  position: relative;
+  z-index: 0;
+}
+
+.banner .container-fluid img {
+  width: 100%;
+  height: 100dvh;
+}
+.banner .container-fluid .row .col-md-7 {
+  position: absolute;
+  top: 49%;
+  transform: translateY(-50%);
+  left: 8%;
+  letter-spacing: -5px;
+  width: 55%;
+}
+h1 {
+  font-size: clamp(1.4rem, 5vw, 6rem);
+  text-transform: uppercase;
+  line-height: 130px;
+  color: white;
+  text-shadow: 1px 1px 4px #303030;
+  font-weight: 700;
+}
+span {
+  color: #19b1ff;
+}
+
+.banner .container-fluid .inner-form {
+  position: absolute;
+  background-color: white;
+  top: 10%;
+  width: 30.5%;
+  right: 5.5%;
+  border-radius: 10px;
+  height: 67%;
+  padding: 37px;
+  margin: 30px;
+  border: 3px solid #1db2ff;
+}
+.banner .container-fluid .inner-form h3 {
+  margin-bottom: 30px;
+}
+.inner-form .input-section {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.inner-form .input-section label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+}
+.inner-form .input-section input {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding: 0 20px;
+  outline: none;
+}
+.inner-form > .prop-vw {
+  width: 95%;
+  color: white;
+  background: #1db2ff;
+  border: none;
+  height: 50px;
+  bottom: 10%;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.inner-form > .prop-vw:hover {
+  background: #1db2ff;
+}
+/*property section*/
+.property-sec {
+  height: 70dvh;
+  width: 90%;
+  margin: 0 auto;
+}
+.property-sec h2 {
+  margin: 60px 0 40px 0;
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  color: #1db2ff;
+  font-weight: 600;
+  position: relative;
+}
+.property-sec h2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  width: 120px;
+  height: 3px;
+  background-color: #19b1ff;
+}
+.owl-stage-outer {
+  min-height: 29rem;
+  position: relative;
+}
+.item {
+  box-shadow: 0px 0px 1px 2px #eee;
+  height: 28rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.item:hover .prop-img img {
+  scale: 1.2;
+}
+.prop-img {
+  height: 55%;
+  overflow: hidden;
+}
+.prop-img img {
+  transition: 1s all;
+  width: 100%;
+  height: 100%;
+}
+.prop-content {
+  padding-left: 10px;
+  padding-top: 10px;
+  color: black;
+  opacity: 90%;
+}
+.prop-content .row {
+  padding-left: 15px;
+}
+.prop-content .row .col-md-3 {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.prop-content .row .col-md-3 i {
+  color: #1db2ff;
+  font-size: 16px;
+  border: 1px dashed #1db2ff;
+  display: inline;
+  width: 42px;
+  padding: 5px;
+}
+.prop-vw {
+  width: 95%;
+  color: white;
+  background: #1db2ff;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.multi-prop {
+  height: 70rem;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  bottom: 100%;
+  right: 3%;
+}
+.owl-nav .owl-prev span {
+  font-size: 5rem;
+}
+.owl-nav .owl-next span {
+  font-size: 5rem;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background-color: transparent;
+}
+
+/*carding section*/
+.carding {
+  padding: 50px 0;
+  background-color: #edf9ff;
+}
+.carding .row {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.carding .item {
+  padding: 0;
+  position: relative;
+  max-height: 30rem;
+  margin-right: 20px;
+  max-width: 24rem;
+}
+.carding .item .prop-img {
+  height: 250px;
+  width: 100%;
+}
+.carding .container-fluid {
+  padding: 20px 100px;
+}
+@media (max-width: 992px) {
+  .carding .container-fluid {
+    padding: 20px;
+  }
+}
+/*list section*/
+.list {
+  background: url("https://bsaurabh093.github.io/VacationRental/img/houzez-property-slider.jpg")
+    fixed;
+  position: relative;
+  background-size: cover;
+  min-height: 92dvh;
+}
+.list::before,
+.contact::before,
+.banner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 66, 116, 0.45);
+}
+.list .idea {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+}
+.list .row {
+  padding: 50px;
+  z-index: 222;
+  position: relative;
+  height: 100%;
+}
+.list .row ul {
+  list-style: none;
+  padding: 0;
+}
+.list .row ul li {
+  margin-bottom: 20px;
+}
+.list .row ul li a {
+  font-size: clamp(18px, 2vw, 26px);
+  color: white;
+  text-decoration: none;
+}
+
+/*Destination section*/
+.Destination {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.col-md-12 h2 {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1db2ff;
+  position: relative;
+}
+.col-md-12 h2::before {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  width: 100px;
+  height: 3px;
+  background-color: white;
+}
+.Destination .row {
+  justify-content: center;
+  gap: 20px;
+}
+.Destination .col-md-6 {
+  height: 18rem;
+  width: 48rem;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 10px;
+}
+.bg-sec {
+  width: 100%;
+  height: 100%;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  cursor: pointer;
+  transition: 1s all;
+}
+.dest-cap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(1deg, black, transparent);
+}
+.dest-cap h2 {
+  color: white;
+}
+.col-md-4 {
+  position: relative;
+  height: 18rem;
+  width: 31.6rem;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 10px;
+}
+.bg-section {
+  height: 18rem;
+  overflow: hidden;
+}
+.col-md-4:hover img,
+.col-md-6 :hover img {
+  scale: 1.1;
+}
+
+/*contact section*/
+
+.contact {
+  background: url("https://bsaurabh093.github.io/VacationRental/img/contactBg.jpg")
+    fixed;
+  position: relative;
+  background-size: cover;
+  min-height: 60dvh;
+}
+
+.col-md-6 .inner-box {
+  position: relative;
+  z-index: 222;
+  margin: 30px 44px;
+  padding: 30px 16px;
+  background: #1db2ff2e;
+}
+.contact .col-md-6 h2 {
+  color: white;
+}
+.contact .col-md-6 p {
+  color: white;
+}
+
+/*vacation section*/
+.vacation {
+  background: linear-gradient(#065e80, #0b8ebf);
+  min-height: 35dvh;
+}
+.vacation .container-fluid,
+footer .container-fluid > .row:nth-child(1) {
+  height: 100%;
+  padding-top: 20px;
+  padding-inline: 100px;
+}
+.vacation .container-fluid ul {
+  list-style: none;
+  color: white;
+}
+.vacation .container-fluid ul .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.vacation .container-fluid ul li {
+  font-size: 18px;
+  margin-block: 4px;
+  position: relative;
+}
+.vacation .container-fluid ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background: #363636;
+  min-height: 30dvh;
+}
+footer ul {
+  list-style: none;
+}
+footer ul .title {
+  font-size: 24px;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+footer ul .title ::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  height: 20px;
+  width: 1px;
+  background-color: white;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li input {
+  width: 80%;
+  padding-left: 30px;
+  height: 45px;
+  outline: none;
+}
+footer ul li button {
+  background: #1db2ff;
+  padding: 10px 25px;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+}
+footer ul li {
+  position: relative;
+}
+
+footer ul li i {
+  position: relative;
+  padding-right: 10px;
+  color: white;
+}
+.fa-envelope {
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+  color: #1db2ff;
+  top: 35%;
+}
+footer .follow {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 10px;
+}
+.follow_us {
+  color: white;
+  font-size: 24px;
+}
+.follow li i {
+  border: 1px dashed white;
+  position: relative;
+  padding: 10px;
+}
+footer .row:nth-child(2) {
+  margin-top: 10px;
+  height: 55px;
+}
+footer .row:nth-child(2) .col-md-12 {
+  position: relative;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
+footer .row:nth-child(2) .col-md-12 h6 {
+  color: white;
+  line-height: 3;
+}
