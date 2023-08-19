@@ -8,80 +8,87 @@
   box-sizing: border-box;
   font-family: "Ysabeau Office", sans-serif;
 }
-header {
+.header {
   z-index: 2;
   position: fixed;
   width: 100%;
   background-color: #ffffff26;
+  z-index: 1205;
 }
-header .container-fluid {
+.header .container-fluid {
   padding-inline: 100px;
 }
 .active {
   color: #1db2ff !important;
 }
-.lstproprty {
+.listproprty {
   background: #1db2ff;
   border-radius: 40px;
   padding: 0px 10px;
 }
-.lstproprty > .nav-link {
+.listproprty > .nav-link {
   color: white;
 }
-.lstproprty > .nav-link:hover {
+.listproprty > .nav-link:hover {
   color: white !important;
 }
 
 .nav-link:hover {
-  color: #1db2ff !important;
-}
-.banner .container-fluid {
-  margin: 0;
-  padding: 0;
+  color: #1db2ff;
 }
 .nav-link {
   color: white;
 }
+@media (min-width: 240px) and (max-width: 992px) {
+  .header .container-fluid {
+    padding-inline: 40px;
+  }
+}
+/*banner section*/
 .banner {
   position: relative;
-  z-index: 0;
+  background: url("https://bsaurabh093.github.io/VacationRental/img/banner.jpg");
+  background-size: cover;
+  min-height: 90dvh;
+  overflow: hidden;
+}
+.banner .container-fluid {
+  margin: 0;
+  padding: 0;
+  min-height: 90dvh;
+}
+.banner .container-fluid .row {
+  min-height: 90dvh;
+  align-items: center;
+  padding: 0 100px;
 }
 
-.banner .container-fluid img {
-  width: 100%;
-  height: 100dvh;
-}
-.banner .container-fluid .row .col-md-7 {
-  position: absolute;
-  top: 49%;
-  transform: translateY(-50%);
-  left: 8%;
+.banner .container-fluid .row .banner-heading {
   letter-spacing: -5px;
-  width: 55%;
+  z-index: 2;
+  position: relative;
 }
-h1 {
-  font-size: clamp(1.4rem, 5vw, 6rem);
+.banner .container-fluid .row .banner-heading h1 {
+  font-size: clamp(3rem, 5vw, 6rem);
   text-transform: uppercase;
   line-height: 130px;
   color: white;
   text-shadow: 1px 1px 4px #303030;
   font-weight: 700;
 }
-span {
+.banner .container-fluid .row .banner-heading h1 span {
   color: #19b1ff;
 }
 
 .banner .container-fluid .inner-form {
-  position: absolute;
   background-color: white;
-  top: 10%;
-  width: 30.5%;
-  right: 5.5%;
   border-radius: 10px;
-  height: 67%;
   padding: 37px;
+  height: 100%;
   margin: 30px;
   border: 3px solid #1db2ff;
+  position: relative;
+  z-index: 2;
 }
 .banner .container-fluid .inner-form h3 {
   margin-bottom: 30px;
@@ -92,6 +99,13 @@ span {
   height: 45px;
   display: inline-block;
   margin-bottom: 20px;
+}
+.inner-form .input-section i {
+  position: absolute;
+  right: 22px;
+  z-index: 2;
+  top: 12px;
+  font-size: 18px;
 }
 .inner-form .input-section label {
   position: absolute;
@@ -108,19 +122,43 @@ span {
   outline: none;
 }
 .inner-form > .prop-vw {
-  width: 95%;
+  width: 100%;
   color: white;
   background: #1db2ff;
   border: none;
   height: 50px;
   bottom: 10%;
   border-radius: 5px;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 .inner-form > .prop-vw:hover {
   background: #1db2ff;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+.black {
+  color: black;
+}
+
+@media (min-width: 240px) and (max-width: 992px) {
+  .banner .container-fluid .row {
+    padding: 0 20px;
+  }
+  .banner .container-fluid .inner-form {
+    padding: 20px;
+  }
+  .banner .container-fluid .row .banner-heading h1 {
+    line-height: 60px;
+    margin-top: 80px;
+  }
 }
 /*property section*/
 .property-sec {
@@ -308,6 +346,7 @@ span {
   font-family: "Noto Serif", serif;
   font-size: 2rem;
   margin-bottom: 10px;
+  margin-left: 7%;
   color: #1db2ff;
   position: relative;
 }
