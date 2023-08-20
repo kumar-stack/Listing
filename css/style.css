@@ -48,36 +48,48 @@
 .banner {
   position: relative;
   background: url("https://bsaurabh093.github.io/VacationRental/img/banner.jpg");
-  background-size: cover;
-  min-height: 90dvh;
+  background-size: 112.5rem 100%;
+  min-height: 100dvh;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 .banner .container-fluid {
   margin: 0;
   padding: 0;
   min-height: 90dvh;
+  padding-inline: 95px 100px;
 }
 .banner .container-fluid .row {
   min-height: 90dvh;
   align-items: center;
-  padding: 0 100px;
 }
 
 .banner .container-fluid .row .banner-heading {
-  letter-spacing: -5px;
+  width: 110%;
   z-index: 2;
   position: relative;
 }
 .banner .container-fluid .row .banner-heading h1 {
-  font-size: clamp(3rem, 5vw, 6rem);
-  text-transform: uppercase;
+  font-size: clamp(3rem, 6vw, 6rem);
   line-height: 130px;
   color: white;
   text-shadow: 1px 1px 4px #303030;
-  font-weight: 700;
+  font-weight: 500;
+  margin-top: 75px;
+  font-family: "Roboto", sans-serif;
 }
 .banner .container-fluid .row .banner-heading h1 span {
   color: #19b1ff;
+  font-family: "Roboto", sans-serif;
+}
+.banner .container-fluid .row .outer {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  margin-top: 8.5rem;
+  margin-left: 6.5rem;
 }
 
 .banner .container-fluid .inner-form {
@@ -85,13 +97,25 @@
   border-radius: 10px;
   padding: 37px;
   height: 100%;
-  margin: 30px;
-  border: 3px solid #1db2ff;
+  box-shadow: 0 0 1px 1px #19b1ff;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 .banner .container-fluid .inner-form h3 {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
+  color: #1db2ff;
+  font-weight: 700;
+  position: relative;
+}
+.banner .container-fluid .inner-form h3::before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: 8px;
+  width: 2px;
+  height: 83%;
+  background-color: #1db2ff;
 }
 .inner-form .input-section {
   position: relative;
@@ -102,10 +126,14 @@
 }
 .inner-form .input-section i {
   position: absolute;
-  right: 22px;
+  right: 5px;
   z-index: 2;
-  top: 12px;
-  font-size: 18px;
+  top: 3px;
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  background-color: #1db2ff;
+  width: 2.6rem;
 }
 .inner-form .input-section label {
   position: absolute;
@@ -120,6 +148,8 @@
   position: relative;
   padding: 0 20px;
   outline: none;
+  border: navajowhite;
+  box-shadow: 0 0 1px 0.3px gray;
 }
 .inner-form > .prop-vw {
   width: 100%;
@@ -158,13 +188,15 @@
   .banner .container-fluid .row .banner-heading h1 {
     line-height: 60px;
     margin-top: 80px;
+    font-family: "Roboto", sans-serif;
   }
 }
 /*property section*/
 .property-sec {
-  height: 70dvh;
-  width: 90%;
+  width: 100%;
+  padding-inline: 100px;
   margin: 0 auto;
+  position: relative;
 }
 .property-sec h2 {
   margin: 60px 0 40px 0;
@@ -184,14 +216,26 @@
   background-color: #19b1ff;
 }
 .owl-stage-outer {
-  min-height: 29rem;
   position: relative;
 }
 .item {
   box-shadow: 0px 0px 1px 2px #eee;
-  height: 28rem;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  max-height: 38rem;
+}
+.property-sec > .owl-carousel .item::before {
+  position: absolute;
+  content: "Featured";
+  top: 10px;
+  left: 10px;
+  background-color: #1db2ff;
+  color: white;
+  padding: 5px;
+  z-index: 55;
+  border-radius: 5px;
 }
 .item:hover .prop-img img {
   scale: 1.2;
@@ -204,6 +248,7 @@
   transition: 1s all;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .prop-content {
   padding-left: 10px;
@@ -214,13 +259,13 @@
 .prop-content .row {
   padding-left: 15px;
 }
-.prop-content .row .col-md-3 {
+.prop-content .row .lst {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-.prop-content .row .col-md-3 i {
+.prop-content .row .lst i {
   color: #1db2ff;
   font-size: 16px;
   border: 1px dashed #1db2ff;
@@ -238,28 +283,33 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
 }
-.multi-prop {
-  height: 70rem;
+
+.owl-nav {
+  position: relative;
+  bottom: 20px;
+}
+button > i {
+  color: #1db2ff;
 }
 .owl-nav .owl-prev {
   position: absolute;
-  bottom: 100%;
-  right: 3%;
+  bottom: 90%;
+  border: none;
+  font-size: 2rem;
+  background: none;
+  right: 2.3%;
 }
-.owl-nav .owl-prev span {
-  font-size: 5rem;
-}
-.owl-nav .owl-next span {
-  font-size: 5rem;
-}
+
 .owl-nav .owl-next {
   position: absolute;
-  bottom: 100%;
-  right: 0;
-}
-.owl-theme .owl-nav [class*="owl-"]:hover {
-  background-color: transparent;
+  bottom: 90%;
+  border: none;
+  font-size: 2rem;
+  background: none;
+  right: 0%;
 }
 
 /*carding section*/
@@ -267,29 +317,20 @@
   padding: 50px 0;
   background-color: #edf9ff;
 }
-.carding .row {
-  justify-content: center;
-  margin-bottom: 20px;
+.carding .container-fluid {
+  padding-inline: 100px;
 }
-.carding .item {
-  padding: 0;
-  position: relative;
-  max-height: 30rem;
-  margin-right: 20px;
-  max-width: 24rem;
-}
+
 .carding .item .prop-img {
   height: 250px;
   width: 100%;
-}
-.carding .container-fluid {
-  padding: 20px 100px;
 }
 @media (max-width: 992px) {
   .carding .container-fluid {
     padding: 20px;
   }
 }
+
 /*list section*/
 .list {
   background: url("https://bsaurabh093.github.io/VacationRental/img/houzez-property-slider.jpg")
@@ -309,6 +350,10 @@
   height: 100%;
   background-color: rgba(0, 66, 116, 0.45);
 }
+.list > .container-fluid {
+  padding-inline: 100px;
+  padding-top: 50px;
+}
 .list .idea {
   font-family: "Noto Serif", serif;
   font-size: 2rem;
@@ -317,7 +362,6 @@
   position: relative;
 }
 .list .row {
-  padding: 50px;
   z-index: 222;
   position: relative;
   height: 100%;
@@ -342,39 +386,35 @@
   margin-bottom: 50px;
   overflow: hidden;
 }
-.col-md-12 h2 {
+.Destination .container-fluid {
+  padding-inline: 100px;
+  padding-top: 50px;
+}
+.destination-heading h2 {
   font-family: "Noto Serif", serif;
   font-size: 2rem;
-  margin-bottom: 10px;
-  margin-left: 7%;
+  margin-bottom: 3rem;
   color: #1db2ff;
   position: relative;
 }
-.col-md-12 h2::before {
+.destination-heading h2::before {
   position: absolute;
   content: "";
   bottom: -10px;
   width: 100px;
   height: 3px;
-  background-color: white;
+  background-color: #1db2ff;
 }
-.Destination .row {
-  justify-content: center;
-  gap: 20px;
-}
-.Destination .col-md-6 {
+.Destination .destination-half {
   height: 18rem;
-  width: 48rem;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  width: 100%;
   overflow: hidden;
   padding: 0;
   border-radius: 10px;
 }
-.bg-sec {
-  width: 100%;
-  height: 100%;
-}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -393,19 +433,15 @@ img {
 .dest-cap h2 {
   color: white;
 }
-.col-md-4 {
+.dest-three {
   position: relative;
   height: 18rem;
-  width: 31.6rem;
-  margin-bottom: 10px;
   overflow: hidden;
   padding: 0;
   border-radius: 10px;
+  margin-bottom: 25px;
 }
-.bg-section {
-  height: 18rem;
-  overflow: hidden;
-}
+
 .col-md-4:hover img,
 .col-md-6 :hover img {
   scale: 1.1;
@@ -417,18 +453,21 @@ img {
   background: url("https://bsaurabh093.github.io/VacationRental/img/contactBg.jpg")
     fixed;
   position: relative;
-  background-size: cover;
+  background-size: contain;
   min-height: 60dvh;
 }
+.contact .container-fluid {
+  padding-inline: 100px;
+}
 
-.col-md-6 .inner-box {
+.contact .inner-box {
   position: relative;
   z-index: 222;
-  margin: 30px 44px;
-  padding: 30px 16px;
+  margin-block: 50px;
+  padding: 30px;
   background: #1db2ff2e;
 }
-.contact .col-md-6 h2 {
+.contact h2 {
   color: white;
 }
 .contact .col-md-6 p {
@@ -438,35 +477,44 @@ img {
 /*vacation section*/
 .vacation {
   background: linear-gradient(#065e80, #0b8ebf);
-  min-height: 35dvh;
+  padding-block: 60px;
 }
-.vacation .container-fluid,
-footer .container-fluid > .row:nth-child(1) {
-  height: 100%;
-  padding-top: 20px;
+.vacation .container-fluid {
   padding-inline: 100px;
+}
+.vacation .vacation-list {
+  margin-bottom: 50px;
 }
 .vacation .container-fluid ul {
   list-style: none;
   color: white;
 }
-.vacation .container-fluid ul .title {
+.vacation ul .title {
   font-size: 24px;
   margin-bottom: 20px;
 }
-.vacation .container-fluid ul li {
+.vacation ul li {
   font-size: 18px;
   margin-block: 4px;
   position: relative;
 }
-.vacation .container-fluid ul li a {
+.vacation ul li a {
   color: white;
   text-decoration: none;
 }
+.vacation ul li a i {
+  margin-right: 10px;
+}
 
+/*footer section*/
 footer {
   background: #363636;
-  min-height: 30dvh;
+  padding-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+footer .container-fluid {
+  padding-inline: 100px;
 }
 footer ul {
   list-style: none;
@@ -480,7 +528,7 @@ footer ul .title {
 footer ul .title ::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 0px;
   height: 20px;
   width: 1px;
@@ -496,12 +544,18 @@ footer ul li input {
   height: 45px;
   outline: none;
 }
+@media (max-width: 480px) {
+  footer ul li input {
+    width: 60%;
+  }
+}
 footer ul li button {
   background: #1db2ff;
-  padding: 10px 25px;
+  padding: 8.5px 25px;
   color: #fff;
   border: none;
   font-size: 18px;
+  position: absolute;
 }
 footer ul li {
   position: relative;
@@ -517,7 +571,7 @@ footer ul li i {
   left: 10px;
   z-index: 1;
   color: #1db2ff;
-  top: 35%;
+  top: 40%;
 }
 footer .follow {
   margin-top: 10px;
@@ -535,17 +589,18 @@ footer .follow {
   position: relative;
   padding: 10px;
 }
+
 footer .row:nth-child(2) {
-  margin-top: 10px;
-  height: 55px;
-}
-footer .row:nth-child(2) .col-md-12 {
   position: relative;
   text-align: center;
   background-color: #2a2a2a;
+  margin-top: 10px;
+  height: 55px;
+  bottom: 0;
 }
 
-footer .row:nth-child(2) .col-md-12 h6 {
+footer .row:nth-child(2) h6 {
   color: white;
+  margin: 0;
   line-height: 3;
 }
