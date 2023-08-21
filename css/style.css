@@ -528,7 +528,7 @@ img {
 /*vacation section*/
 .vacation {
   background: linear-gradient(#065e80, #0b8ebf);
-  padding-block: 60px;
+  padding-top: 40px;
 }
 .vacation .container-fluid {
   padding-inline: 100px;
