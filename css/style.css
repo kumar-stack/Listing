@@ -98,7 +98,7 @@
   border-radius: 10px;
   padding: 37px;
   height: 100%;
-  box-shadow: 0 0 1px 1px #19b1ff;
+  border: 1px dashed #19b1ff;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -151,6 +151,17 @@
   outline: none;
   border: navajowhite;
   box-shadow: 0 0 1px 0.3px gray;
+}
+.date {
+  position: relative;
+}
+.inner-form .input-section .date::before {
+  position: absolute;
+  content: "";
+  letter-spacing: 10px;
+  top: -10px;
+  background-color: red;
+  z-index: 33;
 }
 .inner-form > .prop-vw {
   width: 100%;
