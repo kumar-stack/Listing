@@ -59,18 +59,19 @@
   min-height: 90dvh;
   padding-inline: 95px 100px;
 }
-.banner .container-fluid .row {
+
+.banner .row {
   min-height: 90dvh;
   align-items: center;
 }
 
-.banner .container-fluid .row .banner-heading {
+.banner .banner-heading {
   width: 110%;
   z-index: 2;
   position: relative;
 }
-.banner .container-fluid .row .banner-heading h1 {
-  font-size: clamp(3rem, 6vw, 6rem);
+.banner .banner-heading h1 {
+  font-size: clamp(2.2rem, 6vw, 6rem);
   line-height: 130px;
   color: white;
   text-shadow: 1px 1px 4px #303030;
@@ -179,18 +180,22 @@
 }
 
 @media (min-width: 240px) and (max-width: 992px) {
-  .banner .container-fluid .row {
-    padding: 0 20px;
+  .banner .row {
+    padding: 0;
   }
-  .banner .container-fluid .inner-form {
-    padding: 20px;
+  .banner .container-fluid {
+    padding-inline: 20px;
   }
-  .banner .container-fluid .row .banner-heading h1 {
-    line-height: 60px;
-    margin-top: 80px;
-    font-family: "Roboto", sans-serif;
+  .banner .banner-heading h1 {
+    line-height: 50px;
+  }
+  .banner .container-fluid .row .outer {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 }
+
 /*property section*/
 .property-sec {
   width: 100%;
@@ -198,10 +203,11 @@
   margin: 0 auto;
   position: relative;
 }
+
 .property-sec h2 {
   margin: 60px 0 40px 0;
   font-family: "Noto Serif", serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: #1db2ff;
   font-weight: 600;
   position: relative;
@@ -224,7 +230,7 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
-  max-height: 38rem;
+  height: 28rem;
 }
 .property-sec > .owl-carousel .item::before {
   position: absolute;
@@ -287,11 +293,36 @@
   text-decoration: none;
 }
 
-.owl-nav {
+.owl-theme .owl-nav {
   position: relative;
-  bottom: 20px;
+  height: 50px;
+  bottom: 37.5rem;
+  text-align: end;
 }
-button > i {
+.owl-carousel .owl-nav button span {
+  font-size: 5rem;
+  color: #1db2ff;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 576px) {
+  .property-sec {
+    padding-inline: 20px;
+  }
+  .owl-theme .owl-nav {
+    bottom: 48rem;
+  }
+  .item {
+    height: 38rem;
+  }
+  .prop-img {
+    height: 40%;
+  }
+}
+/* button > i {
   color: #1db2ff;
 }
 .owl-nav .owl-prev {
@@ -310,7 +341,7 @@ button > i {
   font-size: 2rem;
   background: none;
   right: 0%;
-}
+} */
 
 /*carding section*/
 .carding {
@@ -319,6 +350,11 @@ button > i {
 }
 .carding .container-fluid {
   padding-inline: 100px;
+}
+@media (max-width: 480px) {
+  .carding .container-fluid {
+    padding-inline: 20px;
+  }
 }
 
 .carding .item .prop-img {
@@ -353,6 +389,11 @@ button > i {
 .list > .container-fluid {
   padding-inline: 100px;
   padding-top: 50px;
+}
+@media (max-width: 480px) {
+  .list > .container-fluid {
+    padding-inline: 20px;
+  }
 }
 .list .idea {
   font-family: "Noto Serif", serif;
@@ -389,6 +430,11 @@ button > i {
 .Destination .container-fluid {
   padding-inline: 100px;
   padding-top: 50px;
+}
+@media (max-width: 480px) {
+  .Destination .container-fluid {
+    padding-inline: 20px;
+  }
 }
 .destination-heading h2 {
   font-family: "Noto Serif", serif;
@@ -459,6 +505,11 @@ img {
 .contact .container-fluid {
   padding-inline: 100px;
 }
+@media (max-width: 480px) {
+  .contact .container-fluid {
+    padding-inline: 20px;
+  }
+}
 
 .contact .inner-box {
   position: relative;
@@ -506,6 +557,11 @@ img {
   margin-right: 10px;
 }
 
+@media (max-width: 576px) {
+  .vacation .container-fluid {
+    padding-inline: 0;
+  }
+}
 /*footer section*/
 footer {
   background: #363636;
@@ -547,6 +603,9 @@ footer ul li input {
 @media (max-width: 480px) {
   footer ul li input {
     width: 60%;
+  }
+  footer .container-fluid {
+    padding-inline: 20px;
   }
 }
 footer ul li button {
