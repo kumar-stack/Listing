@@ -160,6 +160,7 @@
         <div class="item">
           <div class="prop-img">
             <img
+              loading="lazy"
               src="https://bsaurabh093.github.io/VacationRental/img/livingRoom.jpg"
               alt=""
             />
@@ -1379,16 +1380,16 @@
       /*Adding class in Navbar*/
 
       const nav = document.querySelector("header");
-      const navLinks = document.querySelector(".nav-link");
+      const links = document.querySelector(".nav-link");
 
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
         if (value >= 50) {
           nav.classList.add("fixed");
-          navLinks.style.color = "black";
+          links.style.color = "black";
         } else {
           nav.classList.remove("fixed");
-          navLinks.style.color = "white";
+          links.style.color = "white";
         }
       });
     </script>
