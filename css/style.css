@@ -73,10 +73,19 @@
 .banner {
   position: relative;
   background: url("https://bsaurabh093.github.io/VacationRental/img/banner.jpg");
-  background-size: 112.5rem 100%;
+  background-size: 100% 100%;
   min-height: 100dvh;
   overflow: hidden;
   background-repeat: no-repeat;
+}
+.banner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 66, 116, 0.45);
 }
 .banner .container-fluid {
   margin: 0;
@@ -96,7 +105,7 @@
   position: relative;
 }
 .banner .banner-heading h1 {
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(2rem, 6vw, 6rem);
   line-height: 130px;
   color: white;
   text-shadow: 1px 1px 4px #303030;
@@ -226,7 +235,7 @@
     padding: 0;
   }
   .banner .container-fluid {
-    padding-inline: 20px;
+    padding-inline: 30px;
   }
   .banner .container-fluid .row .outer {
     width: 100%;
@@ -242,6 +251,9 @@
   }
 }
 @media (width: 375px) {
+  .banner {
+    background-size: 100% 110dvh;
+  }
   .banner .container-fluid .row .outer {
     padding: 30px;
     margin-bottom: 40px;
@@ -252,12 +264,15 @@
   }
 }
 @media (max-width: 768px) {
+  .banner {
+    background-size: 100% 78dvh;
+  }
   .banner .banner-heading h1 {
     font-size: 1.5rem;
     line-height: 1.8;
     margin-top: 80px;
     margin-bottom: 30px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 }
 @media (width: 768px) {
@@ -282,9 +297,13 @@
 }
 @media (width: 1024px) {
   .banner {
-    min-height: 68dvh;
+    background-size: 100% 90dvh;
+    height: 90dvh;
   }
-  .banner .container-fluid {
+  .banner::before {
+    height: 90dvh;
+  }
+  .li .banner .container-fluid {
     min-height: 68dvh;
   }
   .banner .row {
@@ -308,6 +327,16 @@
     margin: 0;
     bottom: 14rem;
     left: 22rem;
+  }
+  @keyframes animate {
+    0% {
+      top: -200px;
+      opacity: 0;
+    }
+    100% {
+      top: -190px;
+      opacity: 1;
+    }
   }
 }
 
@@ -506,6 +535,7 @@
 @media (width: 1024px) {
   .property-sec {
     padding-inline: 30px;
+    top: -120px;
   }
 }
 /* button > i {
@@ -626,6 +656,10 @@
   }
 }
 @media (width: 1024px) {
+  .carding {
+    position: relative;
+    top: -80px;
+  }
   .carding .container-fluid {
     padding-inline: 30px;
   }
@@ -640,8 +674,7 @@
   min-height: 92dvh;
 }
 .list::before,
-.contact::before,
-.banner::before {
+.contact::before {
   position: absolute;
   content: "";
   left: 0;
