@@ -178,7 +178,8 @@
   position: absolute;
   right: 5px;
   z-index: 2;
-  top: 3px;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 12px;
   border-radius: 5px;
   color: white;
@@ -419,8 +420,9 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: start;
   padding: 0;
+  gap: 3rem;
 }
 .prop-content .lst {
   list-style: none;
@@ -433,8 +435,11 @@
   font-size: 16px;
   border: 1px dashed #1db2ff;
   display: inline;
-  width: 42px;
   padding: 5px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .prop-vw {
   width: 95%;
@@ -453,7 +458,7 @@
 .owl-theme .owl-nav {
   position: absolute;
   height: 50px;
-  bottom: 105%;
+  bottom: 106%;
   text-align: end;
   right: 0;
 }
@@ -587,8 +592,8 @@
 .carding .prop-content ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-left: 10px;
+  justify-content: start;
+  gap: 1rem;
 }
 .carding .prop-content .lst {
   list-style: none;
@@ -914,7 +919,7 @@ img {
 }
 .vacation ul .title a i {
   margin-right: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .vacation ul li a i {
